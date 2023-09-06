@@ -2,7 +2,14 @@
 import ReactDOM from 'react-dom/client';
 // import "./index.css";
 import src from "./college entrance exam-pana.png" ;
-const cardStyle = {
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function Greeting( {name , city , age , contact}){
+   
+    return (
+      <>
+     <div style={{
   backgroundColor: "blanchedalmond",
   margin: "20px",
   height: "190px",
@@ -11,27 +18,17 @@ const cardStyle = {
   width: "600px",
   display:" block",
   margin: "10px auto",
-}
-const textCard={
-  textAlign: "center",
-  
-}
-const img ={
+}}> 
+
+     <img src= {src} style={{
   height :"100px",
   display :" block",
   margin : "10px auto",
-}
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-function Greeting( {name , city , age , contact}){
-   
-    return (
-      <>
-     <div style={cardStyle}> 
-     <img src= {src} style={img}/>
-      <h3 style={textCard}>My Name is  {name} I am from {city} I am {age} years old , <br/>
+}}/>
+      <h3 style={{
+  textAlign: "center",
+  
+}}>My Name is  {name} I am from {city} I am {age} years old , <br/>
       contact me {contact}</h3>
      </div>
    
