@@ -1,17 +1,30 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import src from "./college entrance exam-pana.png" ;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function Greeting( {name , city , age , contact}){
+   
+    return (
+      <>
+     <div className ="card"> 
+  <img src= {src} className="img"/>
+      <h3 className="text-card">My Name is  {name} I am from {city} I am {age} years old , <br/>
+      contact me {contact}</h3>
+     </div>
+   
+      <hr/>
+      </>
+    )
+    }
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ <>
+  <Greeting name="Bandini" city="Ballarpur " age="22" contact="9503506772"/>
+  
+  <Greeting name="Nikita" city="Nagpur" age="20" contact="9503506772"/>
+ </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
